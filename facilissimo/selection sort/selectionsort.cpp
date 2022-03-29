@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//swap of integers
 void swap(int& a, int& b) {
     int temp = a;
     a=b;
@@ -11,12 +12,7 @@ void swap(int& a, int& b) {
 }
 
 
-void printArray(int array[], int n) {
-    for(int i=0; i<n; i++) {
-        cout << array[i] << "\t" ;
-    }
-    cout << endl;
-}
+
 
 int main() {
     fstream fileInput("input.txt", fstream::in);
@@ -28,12 +24,16 @@ int main() {
         int length;
         fileInput >> length;
 
+        //Create an array of integer for all iterations
         int array[length];
         for (int t = 0; t < length; t++) {
             fileInput >> array[t];
         }
 
+        //Variable of sum of (k-i) index
         int sum_index = 0;
+
+        //Selection Sort
         for(int j=0; j<length; j++) {
             int indexMin = j; 
             for(int z=j+1; z<length; z++) {
@@ -43,9 +43,7 @@ int main() {
             }
             sum_index+=indexMin-j;
             swap(array[j], array[indexMin]);
-            //printArray(array,length);
         }
-        //printArray(array,length);
         fileOutput << sum_index << endl;
     }
 }
