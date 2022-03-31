@@ -4,12 +4,6 @@
 
 using namespace std;
 
-//swap of integers
-void swap(int& a, int& b) {
-    int temp = a;
-    a=b;
-    b=temp;
-}
 
 
 int main() {
