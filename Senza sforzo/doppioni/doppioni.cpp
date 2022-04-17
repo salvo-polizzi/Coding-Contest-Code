@@ -4,14 +4,13 @@
 using namespace std;
 
 
+//Impongo a 0 i doppioni già trovati
 void deleteDoppioni(int* arr, int n, int doppione) {
     for(int i=0; i<n; i++) {
         if(arr[i]==doppione){
-            //cout << "Impongo a 0 il numero in posizione: " << i << endl;
             arr[i]=0;
         }
     }
-    //cout << endl << endl;
 }
 
 
@@ -31,11 +30,8 @@ int main() {
 
         int countDoppioni=0;
         for(int j=0; j<numberOfComics; j++) {
-            if (nemoComics[j] != 0) {
+            if (nemoComics[j] != 0) { //Non devo entrare nel ciclo se il numero è 0, poiche è un doppione
                 for (int z = j + 1; z < numberOfComics; z++) {
-                    if(z==numberOfComics)
-                        cout << "z=" << numberOfComics;
-
                     if (nemoComics[j] == nemoComics[z])
                         countDoppioni++;
                 }
@@ -43,6 +39,5 @@ int main() {
             }
         }
         output << countDoppioni << endl;
-        //cout << countDoppioni << endl;
     }
 }
