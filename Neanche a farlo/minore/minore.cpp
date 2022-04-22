@@ -21,21 +21,18 @@ int main() {
         while(!found) {
             string attuale;
             fileInput >> attuale;
-            //cout << attuale << endl;
             
             if(attuale != fermati) {
                 int actual;
                 ss << attuale;
                 ss >> actual;
                 ss.clear();
-                //cout<< "Numero: " << actual << endl; 
-                if(actual<minore){
+                
+                if(actual<minore)
                     minore = actual;
-                    //cout << "Nuovo minore" << endl;
-                }
+                
             }else{
                 found = true;
-                //cout << "Ciclo while finito"<<endl;
             }
         }
 
