@@ -11,7 +11,7 @@ int binarySearch(int arr[], int dim, int val) {
     int numOfAccess = 0;
 
     int start = 0;
-    int end = dim-1;
+    int end = dim;
     while(start!=end && !found) {
         int midpoint = floor((start + end)/2);
 
