@@ -85,12 +85,6 @@ class List{
         friend ostream& operator<<(ostream& os, List<T>& lista) {
             Node<T>* ptr = lista.head;
 
-            /*os << "Array: ";
-            for(int i=0; i<lista.size; i++) {
-                cout << "\t" << lista.arr[i];
-            }*/
-
-           // os << endl << "LISTA: ";
             while(ptr) {
                 os << ptr->val << " ";
                 ptr = ptr->next;

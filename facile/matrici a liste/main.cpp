@@ -9,8 +9,6 @@ int main() {
         int N, M, P;
         input >> N >> M >> P;
 
-        //cout << "N=" << N << ", M=" << M << ", P=" << P << endl; 
-
 
         LMatrix matrice1(N, M);
         LMatrix matrice2(M, P);
@@ -22,7 +20,6 @@ int main() {
                 input >> num;
                 toInsert.insertTail(num);
             }
-            //cout << "toInsert: " << toInsert << endl;
             matrice1.setLMatrix(j, toInsert);
         }
 
@@ -44,10 +41,6 @@ int main() {
         
 
         LMatrix toReturn = matrice1.multiplication(matrice2, P);
-
-        //cout << matrice1 << endl;
-        //cout << matrice2 << endl;
-        //cout << "------Multiplication-----" << endl << toReturn << endl;
 
         List<int>* toRetMatrix = toReturn.getMatrix();
         for(int i=0; i<N; i++) {

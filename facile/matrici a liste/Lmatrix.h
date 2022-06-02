@@ -39,13 +39,9 @@ class LMatrix{
                 for(int j=0; j<P; j++) {
                     int sum = 0;
                     for(int z=0; z<M; z++) {
-                        //cout << "Valore della lista Matrice Oggetto: " << (this->Matrix[i]).getValIndex(z) << endl;
-                        //cout << "Valore della lista Matrice Passata come parametro: " << (Smatrix.Matrix[z]).getValIndex(j) << endl;
-
                         sum += (this->Matrix[i]).getValIndex(z) * (Smatrix.Matrix[z]).getValIndex(j);
                     }
                     toInsert.insertTail(sum);
-                    //cout << "sum=" << sum << endl;
                 }
                 toReturn.Matrix[i] = toInsert;
             }
