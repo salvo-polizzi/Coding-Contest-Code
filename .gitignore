@@ -1,7 +1,8 @@
 settings.json
-.DS_Store
-a.out
+*.DS_Store
+*.out
 a.exe
 output.txt
 input.txt
-.exe
+*.exe
+*.vscode
