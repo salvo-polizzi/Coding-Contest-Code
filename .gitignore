@@ -6,3 +6,5 @@ output.txt
 input.txt
 *.exe
 *.vscode
+*.dSYM
+main
